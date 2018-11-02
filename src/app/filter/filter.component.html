@@ -1,0 +1,69 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Type
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of response?.aggs[3].buckets"
+        (click)="updateFilters('_type', item.key)">
+      <input type="checkbox" [checked]="searchService.filter._type.indexOf(item.key) > -1"/>
+      <label for="checkbox">{{item?.key}}</label>
+      <span class="badge pull-right">{{item?.doc_count}}</span>
+    </li>
+  </ul>
+</div>
+<div *ngIf="searchService.filter._type.indexOf('variable') > -1">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Subtype
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of response?.aggs[4].buckets"
+          (click)="updateFilters('sub_type.raw', item.key)">
+        <input type="checkbox" [checked]="searchService.filter['sub_type.raw'].indexOf(item.key) > -1"/>
+        <label for="checkbox">{{item?.key}}</label>
+        <span class="badge pull-right">{{item?.doc_count}}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Study
+  </div>
+  <ul class="list-group">
+    <a class="list-group-item list-group-item-action" *ngFor="let item of response?.aggs[0].buckets"
+       (click)="updateFilters('study.raw', item.key)">
+      <input type="checkbox" [checked]="searchService.filter['study.raw'].indexOf(item.key) > -1"/>
+      <label for="checkbox">{{item?.key}}</label>
+      <span class="badge pull-right">{{item?.doc_count}}</span>
+    </a>
+  </ul>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Analysis unit
+  </div>
+  <ul class="list-group">
+    <a class="list-group-item list-group-item-action" *ngFor="let item of response?.aggs[2].buckets"
+       (click)="updateFilters('analysis_unit', item.key)">
+      <input type="checkbox" [checked]="searchService.filter.analysis_unit.indexOf(item.key) > -1"/>
+      <label for="checkbox">{{item?.key}}</label>
+      <span class="badge pull-right">{{item?.doc_count}}</span>
+    </a>
+  </ul>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Period
+  </div>
+  <ul class="list-group">
+    <a class="list-group-item list-group-item-action" *ngFor="let item of response?.aggs[1].buckets"
+       (click)="updateFilters('period', item.key)">
+      <input type="checkbox" [checked]="searchService.filter.period.indexOf(item.key) > -1"/>
+      <label for="checkbox">{{item?.key}}</label>
+      <span class="badge pull-right">{{item?.doc_count}}</span>
+    </a>
+  </ul>
+</div>
+
+

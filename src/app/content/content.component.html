@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+  <div class="panel-heading text-right">{{response?.total}} results</div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngIf="response?.total === 0"><b>No results.</b> Try to change query or filter options.</li>
+    <li class="list-group-item" *ngFor="let item of response?.content">
+        <span [ngSwitch]="item._type">
+            <span class="pull-right">
+                <span *ngIf="item._type == 'variable' || item._type == 'question'  || item._type == 'concept'" class="btn btn-xs btn-default btn-icon"
+                      (click)="getModalContent(item._type, item._id)" data-toggle="modal" data-target="#quickView">
+                    <span class="glyphicon glyphicon glyphicon-eye-open icon" aria-hidden="true"></span>
+                </span>
+                <span *ngIf="basket != null && item._type =='variable'">
+                    <span class="btn btn-xs btn-default btn-basket btn-icon" [attr.basket]="basket" [attr.variable]="item._id">
+                        <span class="glyphicon glyphicon-shopping-cart icon" aria-hidden="true"></span>
+                    </span>
+                </span>
+            </span>
+          <span *ngSwitchCase="'variable'"><variable [variable]="item"></variable></span>
+          <span *ngSwitchCase="'publication'"><publication [publication]="item"></publication></span>
+          <span *ngSwitchCase="'concept'"><concept [concept]="item"></concept></span>
+          <span *ngSwitchCase="'question'"><question [question]="item"></question></span>
+        </span>
+    </li>
+  </ul>
+</div>
+<div class="text-center">
+  <div class="btn-group" role="group" *ngIf="response != null || response?.content.length == 0">
+    <button type="button" class="btn btn-default" (click)="previousPage()" *ngIf="!firstPage">Previous</button>
+    <button type="button" class="btn btn-default" (click)="nextPage()"
+            *ngIf="!lastPage && response?.content.length > 1">Next
+    </button>
+  </div>
+</div>
+
+<!-- Quick View Modal -->
+<div class="modal fade" id="quickView" tabindex="-1" role="dialog" aria-labelledby="quickView">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" [innerHTML]="modalHeader">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+          aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body" [innerHTML]="modalContent"></div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-default"
+           [href]="urlRedirect + redirectType + '/' + redirectId">Show more</a>
+      </div>
+    </div>
+  </div>
+</div>

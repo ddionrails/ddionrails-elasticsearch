@@ -1,0 +1,848 @@
+{
+  "mappings": {
+    "variable": {
+      "properties": {
+        "analysis_unit": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "categories": {
+          "properties": {
+            "frequencies": {
+              "type": "long"
+            },
+            "labels": {
+              "type": "string"
+            },
+            "missings": {
+              "type": "boolean"
+            },
+            "values": {
+              "type": "string"
+            }
+          }
+        },
+        "dataset": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string",
+          "fields": {
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "label_de": {
+          "type": "string",
+          "fields": {
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "name_cs": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "period": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "period_id": {
+          "type": "integer"
+        },
+        "release_id": {
+          "type": "integer"
+        },
+        "scale": {
+          "type": "string"
+        },
+        "statistics": {
+          "properties": {
+            "names": {
+              "type": "string"
+            },
+            "values": {
+              "type": "string"
+            }
+          }
+        },
+        "study": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "study_id": {
+          "type": "integer"
+        },
+        "sub_type": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "text_element": {
+          "type": "string"
+        },
+        "uni": {
+          "properties": {
+            "frequencies": {
+              "type": "long"
+            },
+            "labels": {
+              "type": "string"
+            },
+            "missings": {
+              "type": "boolean"
+            },
+            "values": {
+              "type": "string"
+            }
+          }
+        },
+        "variable": {
+          "type": "string"
+        },
+        "year": {
+          "type": "string"
+        }
+      }
+    },
+    "variables": {
+      "properties": {
+        "dataset": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "study": {
+          "type": "string"
+        },
+        "variable": {
+          "type": "string"
+        }
+      }
+    },
+    "study": {
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "concept": {
+      "properties": {
+        "analysis_unit": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "label": {
+          "type": "string",
+          "fields": {
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "period": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "study": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "sub_type": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "text_element": {
+          "type": "string"
+        }
+      }
+    },
+    "dataset": {
+      "properties": {
+        "analysis_unit": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "period": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "release_id": {
+          "type": "integer"
+        },
+        "study": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "study_id": {
+          "type": "integer"
+        },
+        "sub_type": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "text_element": {
+          "type": "string"
+        }
+      }
+    },
+    "instrument": {
+      "properties": {
+        "analysis_unit": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "period": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "study": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "sub_type": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        }
+      }
+    },
+    "publication": {
+      "properties": {
+        "ENTRYTYPE": {
+          "type": "string"
+        },
+        "ID": {
+          "type": "string"
+        },
+        "abstract": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "analysis_unit": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "author": {
+          "type": "string",
+          "fields": {
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "booktitle": {
+          "type": "string"
+        },
+        "database": {
+          "type": "string"
+        },
+        "editor": {
+          "type": "string"
+        },
+        "journal": {
+          "type": "string"
+        },
+        "keyword": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string",
+          "fields": {
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "language": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "number": {
+          "type": "string"
+        },
+        "pages": {
+          "type": "string"
+        },
+        "period": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "prepublished": {
+          "type": "string"
+        },
+        "publicationtype": {
+          "type": "string"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "school": {
+          "type": "string"
+        },
+        "series": {
+          "type": "string"
+        },
+        "study": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "sub_type": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "title": {
+          "type": "string",
+          "fields": {
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "topics": {
+          "type": "string"
+        },
+        "volume": {
+          "type": "string"
+        },
+        "year": {
+          "type": "string"
+        }
+      }
+    },
+    "question": {
+      "properties": {
+        "analysis_unit": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "instrument": {
+          "type": "string"
+        },
+        "items": {
+          "properties": {
+            "arrr": {
+              "properties": {
+                "answer_list": {
+                  "type": "string"
+                },
+                "answers": {
+                  "properties": {
+                    "answer_list": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "label_de": {
+                      "type": "string"
+                    },
+                    "questionnaire": {
+                      "type": "string"
+                    },
+                    "study": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "concept": {
+                  "type": "string"
+                },
+                "instruction_de": {
+                  "type": "string"
+                },
+                "item": {
+                  "type": "string"
+                },
+                "number": {
+                  "type": "string"
+                },
+                "question": {
+                  "type": "string"
+                },
+                "questionnaire": {
+                  "type": "string"
+                },
+                "scale": {
+                  "type": "string"
+                },
+                "sn": {
+                  "type": "long"
+                },
+                "study": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "text_de": {
+                  "type": "string"
+                }
+              }
+            },
+            "i1": {
+              "properties": {
+                "item": {
+                  "type": "long"
+                },
+                "question": {
+                  "type": "string"
+                },
+                "questionnaire": {
+                  "type": "string"
+                },
+                "scale": {
+                  "type": "string"
+                },
+                "sn": {
+                  "type": "long"
+                },
+                "study": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "text_de": {
+                  "type": "string"
+                }
+              }
+            },
+            "root": {
+              "properties": {
+                "answer_list": {
+                  "type": "string"
+                },
+                "answers": {
+                  "properties": {
+                    "answer_list": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "label_de": {
+                      "type": "string"
+                    },
+                    "questionnaire": {
+                      "type": "string"
+                    },
+                    "study": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "concept": {
+                  "type": "string"
+                },
+                "instruction": {
+                  "type": "string"
+                },
+                "instruction_de": {
+                  "type": "string"
+                },
+                "item": {
+                  "type": "string"
+                },
+                "number": {
+                  "type": "string"
+                },
+                "question": {
+                  "type": "string"
+                },
+                "questionnaire": {
+                  "type": "string"
+                },
+                "scale": {
+                  "type": "string"
+                },
+                "sn": {
+                  "type": "long"
+                },
+                "study": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "text_de": {
+                  "type": "string"
+                }
+              }
+            },
+            "sons": {
+              "properties": {
+                "answer_list": {
+                  "type": "string"
+                },
+                "answers": {
+                  "properties": {
+                    "answer_list": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "label_de": {
+                      "type": "string"
+                    },
+                    "questionnaire": {
+                      "type": "string"
+                    },
+                    "study": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "concept": {
+                  "type": "string"
+                },
+                "instruction_de": {
+                  "type": "string"
+                },
+                "item": {
+                  "type": "string"
+                },
+                "number": {
+                  "type": "string"
+                },
+                "question": {
+                  "type": "string"
+                },
+                "questionnaire": {
+                  "type": "string"
+                },
+                "scale": {
+                  "type": "string"
+                },
+                "sn": {
+                  "type": "long"
+                },
+                "study": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "text_de": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "label": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "period": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "question": {
+          "type": "string",
+          "fields": {
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "sn": {
+          "type": "long"
+        },
+        "study": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "suggest": {
+              "type": "completion"
+            }
+          }
+        },
+        "sub_type": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        }
+      }
+    },
+    "element": {
+      "properties": {
+        "analysis_unit": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "layout_class": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "period": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "study": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "study_id": {
+          "type": "integer"
+        },
+        "sub_type": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "text_element": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Components &mdash; &#34;DDI on Rails - Elasticsearch&#34; 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="&#34;DDI on Rails - Elasticsearch&#34; 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Suche" href="suche.html"/>
+        <link rel="prev" title="Welcome to “DDI on Rails - Elasticsearch“‘s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> "DDI on Rails - Elasticsearch"
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#results-component">results.component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-component">filter.component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#content-component">content.component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#searchbar-component">searchBar.component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#es-service">es.service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#response-service">response.service</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="suche.html">Suche</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">"DDI on Rails - Elasticsearch"</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Components</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/components.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="components">
+<h1>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/comp_overview.png" src="_images/comp_overview.png" />
+<div class="section" id="results-component">
+<h2>results.component<a class="headerlink" href="#results-component" title="Permalink to this headline">¶</a></h2>
+<p>Parent Component für Filter, Content und SearchBar Component.
+Verbindet Components und alle drei Templates.</p>
+</div>
+<div class="section" id="filter-component">
+<h2>filter.component<a class="headerlink" href="#filter-component" title="Permalink to this headline">¶</a></h2>
+<p>Filter werden über das Template visualisiert:</p>
+<ul class="simple">
+<li>Type</li>
+<li>Analysis Unit</li>
+<li>Study</li>
+<li>Period</li>
+</ul>
+<p><strong>updateFilters(key, val)</strong></p>
+<p>Beim Aktivieren / Deaktivieren eines Filters wird das Filter-Objekt aktualisiert.
+Neue Suchanfrage wird gesendet.</p>
+</div>
+<div class="section" id="content-component">
+<h2>content.component<a class="headerlink" href="#content-component" title="Permalink to this headline">¶</a></h2>
+<p>Jedes Ergebnis der Suchanfrage wird gelistet. Anzeigetext unterscheidet zwischen den Typen <em>variables</em>,
+<em>publications</em> und <em>questions</em>.</p>
+</div>
+<div class="section" id="searchbar-component">
+<h2>searchBar.component<a class="headerlink" href="#searchbar-component" title="Permalink to this headline">¶</a></h2>
+<p>Template bildet Suchleiste ab.</p>
+<p><strong>search()</strong></p>
+<p>Such-Term wird im Anfrage-Objekt in search.service aktualisiert. Suchanfrage wird ausgelöst
+und Filter zurückgesetzt.</p>
+</div>
+<div class="section" id="es-service">
+<h2>es.service<a class="headerlink" href="#es-service" title="Permalink to this headline">¶</a></h2>
+<p>Elasticsearch Service sendet Anfrage an die Datenbank und gibt Antwort
+unbearbeitet an Response Service weiter.</p>
+<p><strong>setQueryTerm()</strong></p>
+<p>Setz den übergebenen Such-Term im Query-Objekt.</p>
+<p><strong>setFilter()</strong></p>
+<p>Fügt dem Query-Objekt entsprechend dem übergebenen Filter-Objekt Filter-Optionen hinzu.</p>
+<p><strong>setOffset()</strong></p>
+<p>Setzt Offset der Query (gibt Ergebnisse ab dem spezifizierten Index zurück).</p>
+<p><strong>connectToServer()</strong></p>
+<p>Stellt Verbindung zur Datenbank her. Sendet das vorher definierte Query-Objekt.
+Gibt Anwort als Promise zurück.</p>
+</div>
+<div class="section" id="response-service">
+<h2>response.service<a class="headerlink" href="#response-service" title="Permalink to this headline">¶</a></h2>
+<p>Das Response-Objekt im Elasticsearch-Format wird vereinfacht und umstrukturiert um
+den weiteren Zugriff zu erleichtern. Rückgabewert ist Promise.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="suche.html" class="btn btn-neutral float-right" title="Suche" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to “DDI on Rails - Elasticsearch“‘s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, &#34;DDI on Rails - Elasticsearch&#34;.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
