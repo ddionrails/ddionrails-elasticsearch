@@ -1,16 +1,19 @@
 {
   "name": "ddionrails-elasticsearch",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "license": "AGPL-3.0-or-later",
+  "author": {
+    "name": "Marcel Hebing"
+  },
   "scripts": {
+    "build": "ng build",
+    "e2e": "ng e2e",
+    "lint": "ng lint",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "ng test"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^4.3.4",
     "@angular/cdk": "^2.0.0-beta.8",
@@ -51,5 +54,13 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.0.0"
-  }
+  },
+  "maintainers": [
+    {
+      "name": "Marcel Hebing"
+    },
+    {
+      "name": "Carolin Stolpe"
+    }
+  ]
 }
