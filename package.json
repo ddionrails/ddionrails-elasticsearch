@@ -17,6 +17,7 @@
   "dependencies": {
     "@angular/animations": "^4.3.4",
     "@angular/cdk": "^2.0.0-beta.8",
+    "@angular/cli": "^1.6.2",
     "@angular/common": "^4.4.6",
     "@angular/compiler": "^4.4.6",
     "@angular/compiler-cli": "^4.4.6",
@@ -37,7 +38,6 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "^1.6.2",
     "@types/jasmine": "2.5.38",
     "codelyzer": "~2.0.1",
     "jasmine-core": "~2.5.2",
