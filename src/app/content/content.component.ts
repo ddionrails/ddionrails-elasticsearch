@@ -166,13 +166,13 @@ export class ContentComponent implements OnInit {
 
     switch (type) {
       case('question'):
-        icon = '<span class=\'glyphicon glyphicon-edit\'></span>';
+        icon = '<i class="far fa-question-circle"></i>';
         break;
       case('variable'):
-        icon = '<span class=\'glyphicon glyphicon-stats\'></span>';
+        icon = '<i class="fas fa-chart-bar"></i>';
         break;
       case('concept'):
-        icon = '<span class=\'glyphicon glyphicon-certificate\'></span>';
+        icon = '<i class="fas fa-cog"></i>';
         break;
       default:
         icon = '?';

@@ -3,7 +3,7 @@
     <input type="text" class="form-control" [(ngModel)]="queryTerm" (keyup)="autocomplete()" placeholder="Search ...">
     <span class="input-group-btn">
             <button (click)="search()" class="btn btn-default btn-lg">
-                <span class="glyphicon glyphicon-search"></span>
+              <i class="fas fa-search"></i>
             </button>
         </span>
   </div>
@@ -11,8 +11,8 @@
   <span *ngIf="showAutoComplete">
     <ul class="list-group">
       <div *ngFor="let item of responseObjects">
-      <a class="list-group-item list-group-item-action" (click)="search2(item)"> <span
-        class="glyphicon glyphicon-search"></span> {{ item }}</a>
+      <a class="list-group-item list-group-item-action" (click)="search2(item)"> 
+        <i class="fas fa-search"></i>{{ item }}</a>
       </div>
     </ul>
   </span>
