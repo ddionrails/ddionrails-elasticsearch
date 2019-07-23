@@ -7,7 +7,7 @@
         (click)="updateFilters('_type', item.key)">
       <input type="checkbox" [checked]="searchService.filter._type.indexOf(item.key) > -1"/>
       <label for="checkbox">{{item?.key}}</label>
-      <span class="badge pull-right">{{item?.doc_count}}</span>
+      <span class="badge float-right">{{item?.doc_count}}</span>
     </li>
   </ul>
 </div>
@@ -21,7 +21,7 @@
           (click)="updateFilters('sub_type.raw', item.key)">
         <input type="checkbox" [checked]="searchService.filter['sub_type.raw'].indexOf(item.key) > -1"/>
         <label for="checkbox">{{item?.key}}</label>
-        <span class="badge pull-right">{{item?.doc_count}}</span>
+        <span class="badge float-right">{{item?.doc_count}}</span>
       </li>
     </ul>
   </div>
@@ -35,7 +35,7 @@
        (click)="updateFilters('study.raw', item.key)">
       <input type="checkbox" [checked]="searchService.filter['study.raw'].indexOf(item.key) > -1"/>
       <label for="checkbox">{{item?.key}}</label>
-      <span class="badge pull-right">{{item?.doc_count}}</span>
+      <span class="badge float-right">{{item?.doc_count}}</span>
     </a>
   </ul>
 </div>
@@ -48,7 +48,7 @@
        (click)="updateFilters('analysis_unit', item.key)">
       <input type="checkbox" [checked]="searchService.filter.analysis_unit.indexOf(item.key) > -1"/>
       <label for="checkbox">{{item?.key}}</label>
-      <span class="badge pull-right">{{item?.doc_count}}</span>
+      <span class="badge float-right">{{item?.doc_count}}</span>
     </a>
   </ul>
 </div>
@@ -61,7 +61,7 @@
        (click)="updateFilters('period', item.key)">
       <input type="checkbox" [checked]="searchService.filter.period.indexOf(item.key) > -1"/>
       <label for="checkbox">{{item?.key}}</label>
-      <span class="badge pull-right">{{item?.doc_count}}</span>
+      <span class="badge float-right">{{item?.doc_count}}</span>
     </a>
   </ul>
 </div>

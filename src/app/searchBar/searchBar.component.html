@@ -2,12 +2,14 @@
   <div class="input-group" (keyup.enter)="search()">
     <input type="text" class="form-control" [(ngModel)]="queryTerm" (keyup)="autocomplete()" placeholder="Search ...">
     <span class="input-group-btn">
-            <button (click)="search()" class="btn btn-default btn-lg">
-              <i class="fas fa-search"></i>
-            </button>
-        </span>
+      <button (click)="search()" class="btn btn-default btn-lg m-0 p-0">
+        <a type="button" class="btn btn-default h-auto">
+          <i class="fas fa-search"></i>
+        </a>
+      </button>
+    </span>
   </div>
-  <div class="pull-right"><input type="checkbox" [(ngModel)]="keepFilters"/>Keep my filters</div>
+  <div class="float-right"><input type="checkbox" [(ngModel)]="keepFilters"/>Keep my filters</div>
   <span *ngIf="showAutoComplete">
     <ul class="list-group">
       <div *ngFor="let item of responseObjects">

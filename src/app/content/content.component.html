@@ -4,7 +4,7 @@
     <li class="list-group-item" *ngIf="response?.total === 0"><b>No results.</b> Try to change query or filter options.</li>
     <li class="list-group-item" *ngFor="let item of response?.content">
         <span [ngSwitch]="item._type">
-            <span class="pull-right">
+            <span class="float-right">
                 <span *ngIf="item._type == 'variable' || item._type == 'question'  || item._type == 'concept'" class="btn btn-xs btn-default btn-icon"
                       (click)="getModalContent(item._type, item._id)" data-toggle="modal" data-target="#quickView">
                     <i class="far fa-eye" aria-hidden="true"></i>
