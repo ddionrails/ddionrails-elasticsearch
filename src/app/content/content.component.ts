@@ -166,7 +166,7 @@ export class ContentComponent implements OnInit {
 
     switch (type) {
       case('question'):
-        icon = '<i class="far fa-question-circle"></i>';
+        icon = '<i class="fas fa-question"></i>';
         break;
       case('variable'):
         icon = '<i class="fas fa-chart-bar"></i>';
