@@ -166,13 +166,13 @@ export class ContentComponent implements OnInit {
 
     switch (type) {
       case('question'):
-        icon = '<i class="fas fa-question"></i>';
+        icon = '<i class="search-icon fas fa-tasks"></i>';
         break;
       case('variable'):
-        icon = '<i class="fas fa-chart-bar"></i>';
+        icon = '<i class="search-icon fas fa-chart-bar"></i>';
         break;
       case('concept'):
-        icon = '<i class="fas fa-cog"></i>';
+        icon = '<i class="search-icon fas fa-cog"></i>';
         break;
       default:
         icon = '?';
