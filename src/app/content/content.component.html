@@ -25,10 +25,10 @@
 </div>
 <div class="text-center">
   <div class="btn-group" role="group" *ngIf="response != null || response?.content.length == 0">
-    <button type="button" class="btn btn-default" (click)="previousPage()" *ngIf="!firstPage">Previous</button>
-    <button type="button" class="btn btn-default" (click)="nextPage()"
+    <a type="button" class="btn btn-default" (click)="previousPage()" *ngIf="!firstPage">Previous</a>
+    <a type="button" class="btn btn-default" (click)="nextPage()"
             *ngIf="!lastPage && response?.content.length > 1">Next
-    </button>
+    </a>
   </div>
 </div>
 
