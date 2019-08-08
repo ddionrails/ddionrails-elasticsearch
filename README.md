@@ -1,3 +1,5 @@
+# [DEPRECATED] This project is no longer used or developed by the ddionrails/ddionrails maintainers.
+
 # DdionrailsElasticsearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
